@@ -1,0 +1,35 @@
+<!--
+1. Add firebase.js   
+2. Create an account in firebase. Create an app. https://scorching-inferno-7188.firebaseio.com
+3. Create a dataref to that URL. 
+4. Send some JSON data to firebase. set() or push()
+5. Log into firebase and confirm that the data has reached the cloud db. 
+6. Send the same data multiple times. Yup, you could see that. You should have used push() and give it some time.  
+7. Lets also read the data by attaching callback. 
+
+myDataRef.push({fname:"Partha", lname:"Bhattacharjee"});
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Firebase</title>
+<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+<script> 
+var myDataRef = new Firebase("https://scorching-inferno-7188.firebaseio.com");
+
+
+
+myDataRef.on("value", function(snapshot) {
+  alert(snapshot.val().fname);  // Alerts "San Francisco"
+});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
