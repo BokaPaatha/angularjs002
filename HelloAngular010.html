@@ -1,0 +1,31 @@
+<!--
+https://egghead.io/lessons/angularjs-binding
+
+Add script to add angular
+Add ng-app 
+Add ng-model
+Display by {{}}
+Change DOM by {{}}
+  -->
+
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+</head>
+
+<body>
+	Your name please:
+	<input type="text" ng-model="person.name">
+	<h3>
+		Alert? <input type="text" ng-model="css.class">
+	</h3>
+
+	<h1 style="{{css.class}}">Welcome {{person.name}}</h1>
+
+</body>
+</html>
