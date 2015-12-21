@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="StarterApp">
+<head>
+<title>Angular Material</title>
+
+<link rel="stylesheet"
+	href="//ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+
+<style type="text/css">
+body {
+	/*demo*/
+	padding: 5px !important;
+	height: auto !important;
+}
+</style>
+
+</head>
+
+<body ng-controller="AppCtrl">
+	<h1>Angular Material says {{"hello world"}}</h1>
+	<h5>Check the
+		https://material.angularjs.org/latest/layout/container</h5>
+
+
+	<!-- This will be laid out as a single row -->
+	<div layout="row">
+		<div flex="20">[flex="20"]</div>
+		<div flex="70">[flex="70"]</div>
+		<div flex hide-sm hide-xs>[flex]</div>
+	</div>
+
+	<!-- This will layout one over other, like a column  -->
+	<div layout="column">
+		<div flex="20">[flex="20"]</div>
+		<div flex="70">[flex="70"]</div>
+		<div flex hide-sm hide-xs>[flex]</div>
+	</div>
+
+	<!-- Adding some buttons  -->
+	<md-button class="md-raised">Hello There!</md-button>
+
+
+	<!-- Taking some inputs  -->
+	<md-input-container> <label>Email</label> <input
+		ng-model="user.email" type="email"> </md-input-container>
+
+
+	<!-- Adding angular js and angular material magic -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-aria.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+	<script
+		src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('StarterApp', [ 'ngMaterial' ]);
+
+		app.controller('AppCtrl', [ '$scope', function($scope) {
+	
+		} ]);
+	</script>
+
+</body>
+
+
+
+</html>
